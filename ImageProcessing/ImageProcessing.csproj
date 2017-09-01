@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8624CEC4-3ED5-462C-9A41-231CB6523C9B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImageProcessing</RootNamespace>
+    <AssemblyName>ImageProcessing</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\Packages\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BinaryzationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BinaryzationControl.Designer.cs">
+      <DependentUpon>BinaryzationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CropControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CropControl.Designer.cs">
+      <DependentUpon>CropControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFTConvolutionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FFTConvolutionControl.Designer.cs">
+      <DependentUpon>FFTConvolutionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GammaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GammaControl.Designer.cs">
+      <DependentUpon>GammaControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicActionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicActionControl.Designer.cs">
+      <DependentUpon>GraphicActionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IGraphicEffect.cs" />
+    <Compile Include="GrayscaleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GrayscaleControl.Designer.cs">
+      <DependentUpon>GrayscaleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageProcessing.Designer.cs">
+      <DependentUpon>ImageProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageProcessingServices.cs" />
+    <Compile Include="LayerSeparationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayerSeparationControl.Designer.cs">
+      <DependentUpon>LayerSeparationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mask3x3Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mask3x3Control.Designer.cs">
+      <DependentUpon>Mask3x3Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mask5x5Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mask5x5Control.Designer.cs">
+      <DependentUpon>Mask5x5Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NegativeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NegativeControl.Designer.cs">
+      <DependentUpon>NegativeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ColorCorrectionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorCorrectionControl.Designer.cs">
+      <DependentUpon>ColorCorrectionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RotationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RotationControl.Designer.cs">
+      <DependentUpon>RotationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SepiaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SepiaControl.Designer.cs">
+      <DependentUpon>SepiaControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransformControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransformControl.Designer.cs">
+      <DependentUpon>TransformControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebAddressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebAddressDialog.Designer.cs">
+      <DependentUpon>WebAddressDialog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BinaryzationControl.resx">
+      <DependentUpon>BinaryzationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorCorrectionControl.resx">
+      <DependentUpon>ColorCorrectionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CropControl.resx">
+      <DependentUpon>CropControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFTConvolutionControl.resx">
+      <DependentUpon>FFTConvolutionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GammaControl.resx">
+      <DependentUpon>GammaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicActionControl.resx">
+      <DependentUpon>GraphicActionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrayscaleControl.resx">
+      <DependentUpon>GrayscaleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageProcessing.resx">
+      <DependentUpon>ImageProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayerSeparationControl.resx">
+      <DependentUpon>LayerSeparationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mask3x3Control.resx">
+      <DependentUpon>Mask3x3Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mask5x5Control.resx">
+      <DependentUpon>Mask5x5Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NegativeControl.resx">
+      <DependentUpon>NegativeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RotationControl.resx">
+      <DependentUpon>RotationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SepiaControl.resx">
+      <DependentUpon>SepiaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransformControl.resx">
+      <DependentUpon>TransformControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebAddressDialog.resx">
+      <DependentUpon>WebAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
